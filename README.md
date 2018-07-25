@@ -1,6 +1,6 @@
 # Porfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+This is Matias Fernandez Martinez Porfolio Project, feel free to take a look and re use the code if you find it useful.
 
 ## Development server
 
