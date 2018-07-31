@@ -7,6 +7,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MathoHeaderComponent } from './matho-header/matho-header.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { MatCardModule} from  '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ThanksComponent } from './thanks/thanks.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
