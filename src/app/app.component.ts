@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '../../node_modules/@angular/material';
-import {MatCardModule} from  '../../node_modules/@angular/material/card';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

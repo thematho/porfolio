@@ -1,48 +1,13 @@
-<matho-header (toggleMenuEmitter)="toggleNav($event)"></matho-header>
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side">Sidenav content</mat-sidenav>
+  <mat-sidenav #sidenav mode="over">
+    <mat-nav-list>
+      <a href="/home" mat-list-item>Home</a>
+      <a href="/porfolio" mat-list-item>Porfolio</a>
+      <a href="/about" mat-list-item>About</a>
+    </mat-nav-list>
+  </mat-sidenav>
   <mat-sidenav-content>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Simple Card</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis enim exercitationem sint necessitatibus commodi. Nobis
-        quod omnis, atque quisquam illum veritatis sed nihil doloribus? Quisquam ducimus corporis deleniti architecto cum?</mat-card-content>
-    </mat-card>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Simple Card</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis enim exercitationem sint necessitatibus commodi. Nobis
-        quod omnis, atque quisquam illum veritatis sed nihil doloribus? Quisquam ducimus corporis deleniti architecto cum?</mat-card-content>
-    </mat-card>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Simple Card</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis enim exercitationem sint necessitatibus commodi. Nobis
-        quod omnis, atque quisquam illum veritatis sed nihil doloribus? Quisquam ducimus corporis deleniti architecto cum?</mat-card-content>
-    </mat-card>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Simple Card</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis enim exercitationem sint necessitatibus commodi. Nobis
-        quod omnis, atque quisquam illum veritatis sed nihil doloribus? Quisquam ducimus corporis deleniti architecto cum?</mat-card-content>
-    </mat-card>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Simple Card</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis enim exercitationem sint necessitatibus commodi. Nobis
-        quod omnis, atque quisquam illum veritatis sed nihil doloribus? Quisquam ducimus corporis deleniti architecto cum?</mat-card-content>
-    </mat-card>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Simple Card</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis enim exercitationem sint necessitatibus commodi. Nobis
-        quod omnis, atque quisquam illum veritatis sed nihil doloribus? Quisquam ducimus corporis deleniti architecto cum?</mat-card-content>
-    </mat-card>
+    <matho-header (toggleMenuEmitter)="toggleNav($event)"></matho-header>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
