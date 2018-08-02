@@ -1,3 +1,14 @@
-<p>
-  porfolio works!
-</p>
+<mat-card>
+    <mat-card-header>
+        <div mat-card-avatar class="mat-card__header-image"></div>
+        <mat-card-title>It's cold outside</mat-card-title>
+        <mat-card-subtitle>
+            Move the mouse to clean the view 
+            <button mat-icon-button (click)="menuClick()">
+                <mat-icon>refresh</mat-icon>
+            </button></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <cold-window></cold-window>
+    </mat-card-content>
+</mat-card>

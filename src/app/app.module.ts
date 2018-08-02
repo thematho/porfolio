@@ -9,9 +9,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MathoHeaderComponent } from './matho-header/matho-header.component';
 import { HomeComponent } from './home/home.component';
 import { MatSidenavModule, MatButtonModule, MatToolbarModule, MatListModule, MatIconModule } from '@angular/material';
-import appRoutes from './app.routes';
+import { appRoutes } from './app.routes';
 import { AboutComponent } from './about/about.component';
 import { PorfolioComponent } from './porfolio/porfolio.component';
+import { ColdWindowComponent } from './porfolio/cold-window/cold-window.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { PorfolioComponent } from './porfolio/porfolio.component';
     HomeComponent,
     AboutComponent,
     PorfolioComponent,
+    ColdWindowComponent,
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
     VendorsModule,

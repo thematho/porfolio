@@ -3,10 +3,10 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { Routes } from '@angular/router';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: '/home',
         pathMatch: 'full'
     },
     {
@@ -22,5 +22,3 @@ const appRoutes: Routes = [
         component: AboutComponent
     },
 ];
-
-export default appRoutes;

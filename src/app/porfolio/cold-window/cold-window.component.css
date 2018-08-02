@@ -1,0 +1,9 @@
+#cold-window {
+    width: 375px;
+    height: 500px;
+    background-size: 375px 500px;
+    background-repeat: no-repeat;
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}

@@ -1,0 +1,8 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+.photo{
+    max-height: 100%;
+    margin: 10px;
+    border-radius: 50%;
+}
