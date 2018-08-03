@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Contact</h1>
+    </mat-card-title>
+    <mat-card-subtitle>Write me!</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="/assets/contact_banner.jpg" alt="Write me!">
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput placeholder="Name or company" [formControl]="name" required>
+      <mat-error *ngIf="name.invalid">I need to know who you are!</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter your email" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">An email so I can reply back to you would be nice.</mat-error>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
