@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer } from '@angular/core';
 
-const imgUrl = '/assets/winter.jpg'
-const lineWidth: number = 65;
-const radius: number = 80;
 
 @Component({
   selector: 'cold-window',
@@ -16,10 +13,13 @@ export class ColdWindowComponent implements OnInit {
   private _renderer: Renderer;
   _context: any;
   _lastCoord: { x: number; y: number; };
+  private readonly imgUrl = '/assets/winter.jpg'
+  private readonly lineWidth: number = 65;
+  private readonly radius: number = 80;
 
   constructor(renderer: Renderer) {
     this._image = new Image();
-    this._radius = radius;
+    this._radius = this.radius;
     this._renderer = renderer;
   }
 
@@ -33,14 +33,11 @@ export class ColdWindowComponent implements OnInit {
     this._image.onload = () => {
       this._renderer.listen(canvas, 'mousemove', this.onMove.bind(this));
       this._renderer.listen(canvas, 'touchmove', this.onMove.bind(this));
-      this._context.drawImage(this._image,
-        0, 0, this._image.width, this._image.height,
-        0, 0, canvas.width, canvas.height);
-      this._context.globalCompositeOperation = 'destination-out';
-      canvas.style="background-image: url('/assets/winter.jpg');"
+      this.drawImage();
+      canvas.style = `background-image: url('${this.imgUrl}');`
 
     };
-    this._image.src = imgUrl;
+    this._image.src = this.imgUrl;
   }
   private onMove(e: any) {
     let r = this.canvas.nativeElement.getBoundingClientRect(),
@@ -57,7 +54,7 @@ export class ColdWindowComponent implements OnInit {
   private cleanWindow(coord) {
     this._context.beginPath();
     if (this._lastCoord) {
-      this._context.lineWidth = lineWidth;
+      this._context.lineWidth = this.lineWidth;
       this._context.beginPath();
       this._context.moveTo(this._lastCoord.x, this._lastCoord.y);
       this._context.lineTo(coord.x, coord.y);
@@ -67,6 +64,18 @@ export class ColdWindowComponent implements OnInit {
 
     this._context.closePath();
     this._context.fill();
+  }
+
+  private drawImage() {
+    this._context.drawImage(this._image,
+      0, 0, this._image.width, this._image.height,
+      0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
+    this._context.globalCompositeOperation = 'destination-out';
+  }
+
+  refresh() {
+    this._context.globalCompositeOperation = 'source-over';
+    this.drawImage();
   }
 
 }
