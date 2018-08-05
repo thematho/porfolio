@@ -4,3 +4,9 @@
 body {
     margin: 0;
 }
+
+
+mat-slider.mat-slider--thumb-mat-icons .mat-slider-thumb-label-text {
+    font-family: 'Material Icons';
+    font-size: 1.2rem;
+}

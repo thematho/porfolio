@@ -1,19 +1,59 @@
-<mat-card>
+<mat-slider class="mat-slider--thumb-mat-icons" [invert]="false" [max]="1" [min]="0" [step]="1" [displayWith]="getSliderIconText"
+  [thumbLabel]="true" [(ngModel)]="cardIndex" [vertical]="true">
+</mat-slider>
+<form *ngIf="cardIndex === 1" [formGroup]="contactForm" (ngSubmit)="sendEmail()" novalidate>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Contact</h1>
+      </mat-card-title>
+      <mat-card-subtitle>Write me!</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/contact_banner.jpg" alt="Write me!">
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Name or company" formControlName="name" required>
+        <mat-error *ngIf="contactForm.controls.name.invalid">I need to know who you are!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Enter your email" formControlName="email" required>
+        <mat-error *ngIf="contactForm.controls.email.invalid">An email so I can reply back to you would be nice.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Notes" formControlName="note" required>
+        <mat-error *ngIf="contactForm.controls.note.invalid">Let me know something about you or your company.</mat-error>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="sendEmail()" color="primary">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+<mat-card *ngIf="cardIndex === 0">
   <mat-card-header>
     <mat-card-title>
-      <h1>Contact</h1>
+      <h1>Contact for personal stuff</h1>
     </mat-card-title>
-    <mat-card-subtitle>Write me!</mat-card-subtitle>
+    <mat-card-subtitle>Need mentorship? Want to chat about code or play some games?</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="/assets/contact_banner.jpg" alt="Write me!">
   <mat-card-content>
-    <mat-form-field>
-      <input matInput placeholder="Name or company" [formControl]="name" required>
-      <mat-error *ngIf="name.invalid">I need to know who you are!</mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Enter your email" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">An email so I can reply back to you would be nice.</mat-error>
-    </mat-form-field>
+    <mat-list>
+      <mat-list-item>
+        <a mat-icon-button href="https://steamcommunity.com/id/thematho/">
+          <mat-icon>videogame_asset</mat-icon>
+        </a>
+        <span>Steam Profile</span>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-icon-button (click)="onClick">
+          <mat-icon>videogame_asset</mat-icon>
+        </button>
+        <span>Nintendo Switch Friend code</span>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-raised-button (click)="onClick" color="accent">Add me on Hangouts!</button>
+      </mat-list-item>
+    </mat-list>
   </mat-card-content>
 </mat-card>
