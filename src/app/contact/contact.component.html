@@ -40,19 +40,22 @@
   <mat-card-content>
     <mat-list>
       <mat-list-item>
-        <a mat-icon-button href="https://steamcommunity.com/id/thematho/">
+        <a mat-icon-button target="_blank" href="https://steamcommunity.com/id/thematho/"  matTooltip="Go to my Steam Profile">
           <mat-icon>videogame_asset</mat-icon>
         </a>
         <span>Steam Profile</span>
       </mat-list-item>
       <mat-list-item>
-        <button mat-icon-button (click)="onClick">
-          <mat-icon>videogame_asset</mat-icon>
+        <button mat-icon-button (click)="copyText('SW-6495-8088-2501')" matTooltip="Copy Nintendo Friend code">
+          <mat-icon>gamepad</mat-icon>
         </button>
         <span>Nintendo Switch Friend code</span>
       </mat-list-item>
       <mat-list-item>
-        <button mat-raised-button (click)="onClick" color="accent">Add me on Hangouts!</button>
+        <span>Add me on Hangouts! <b>thematho@gmail.com</b></span>
+        <button mat-icon-button (click)="copyText('thematho@gmail.com')" matTooltip="Copy my personal gmail address">
+          <mat-icon>assignment</mat-icon>
+        </button>
       </mat-list-item>
     </mat-list>
   </mat-card-content>

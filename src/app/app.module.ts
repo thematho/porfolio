@@ -14,7 +14,8 @@ import {
   MatFormFieldModule,
   MatCardModule,
   MatInputModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatTooltipModule
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { MathoHeaderComponent } from './matho-header/matho-header.component';
@@ -53,6 +54,7 @@ import { LoadingOverlayComponent } from './loading-overlay/loading-overlay.compo
     MatListModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatTooltipModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
