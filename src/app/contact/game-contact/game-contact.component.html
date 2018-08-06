@@ -1,0 +1,33 @@
+<mat-card *ngIf="cardIndex === 0">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Contact for personal stuff</h1>
+    </mat-card-title>
+    <mat-card-subtitle>Need mentorship? Want to chat about code or play some games?</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="/assets/contact_banner.jpg" alt="Write me!">
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <a mat-icon-button target="_blank" href="https://steamcommunity.com/id/thematho/" matTooltip="Go to my Steam Profile">
+          <mat-icon color="primary">videogame_asset</mat-icon>
+        </a>
+        <span>Steam Profile</span>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-icon-button (click)="copyText('SW-6495-8088-2501')" matTooltip="Copy Nintendo Friend code">
+          <mat-icon color="accent">gamepad</mat-icon>
+        </button>
+        <span>Nintendo Switch Friend code</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span>Add me on Hangouts!
+          <b>thematho@gmail.com</b>
+        </span>
+        <button mat-icon-button (click)="copyText('thematho@gmail.com')" matTooltip="Copy my personal gmail address">
+          <mat-icon color="primary">assignment</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,7 +16,8 @@ import {
   MatCardModule,
   MatInputModule,
   MatProgressSpinnerModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatIconRegistry
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { MathoHeaderComponent } from './matho-header/matho-header.component';
@@ -26,6 +28,9 @@ import { PorfolioComponent } from './porfolio/porfolio.component';
 import { ColdWindowComponent } from './porfolio/cold-window/cold-window.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoadingOverlayComponent } from './loading-overlay/loading-overlay.component';
+import { BusinessContactComponent } from './contact/business-contact/business-contact.component';
+import { GameContactComponent } from './contact/game-contact/game-contact.component';
+import { MentorshipComponent } from './contact/mentorship/mentorship.component';
 
 @NgModule({
   declarations: [
@@ -37,10 +42,15 @@ import { LoadingOverlayComponent } from './loading-overlay/loading-overlay.compo
     ColdWindowComponent,
     ContactComponent,
     LoadingOverlayComponent,
+    BusinessContactComponent,
+    GameContactComponent,
+    MentorshipComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    MatIconModule,
     LayoutModule,
     FormsModule,
     ReactiveFormsModule,
@@ -60,4 +70,11 @@ import { LoadingOverlayComponent } from './loading-overlay/loading-overlay.compo
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg'));
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/steam.svg'));
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/nintendo-switch.svg'));
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/google-hangouts.svg'));
+  }
+}
