@@ -8,5 +8,5 @@ mat-card-content {
 }
 
 .actions__profiles {
-    float: right;
+    text-align: right;
 }
