@@ -30,7 +30,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoadingOverlayComponent } from './loading-overlay/loading-overlay.component';
 import { BusinessContactComponent } from './contact/business-contact/business-contact.component';
 import { GameContactComponent } from './contact/game-contact/game-contact.component';
-import { MentorshipComponent } from './contact/mentorship/mentorship.component';
+import { MentorshipContactComponent } from './contact/mentorship-contact/mentorship-contact.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,7 @@ import { MentorshipComponent } from './contact/mentorship/mentorship.component';
     LoadingOverlayComponent,
     BusinessContactComponent,
     GameContactComponent,
-    MentorshipComponent,
+    MentorshipContactComponent,
   ],
   imports: [
     BrowserModule,

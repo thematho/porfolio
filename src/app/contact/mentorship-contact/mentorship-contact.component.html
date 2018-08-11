@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Contact for personal stuff</h1>
+    </mat-card-title>
+    <mat-card-subtitle>Need mentorship? Want to chat about code?</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image
+    src="/assets/contact_banner.jpg"
+    alt="Write me!">
+  <mat-card-content>
+    <p>Just write me to my email
+      <b class="clickable"
+        (click)="copyText('thematho@gmail.com')"
+        matTooltip="Copy email">thematho@gmail.com</b> and we can chat about code. If you are a newcomer to Web Development I can
+      help you with your next steps. </p>
+  </mat-card-content>
+</mat-card>

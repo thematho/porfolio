@@ -6,15 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
-  ngOnInit() {
-  }
-
+  cardIndex: number = 2;
+  
+  ngOnInit() {}
+  
   getSliderIconText(v) {
-    return v ? 'email' : 'videogame_asset';
+    const iconMap = {
+      0: 'videogame_asset',
+      1: 'supervisor_account',
+      2: 'email',
+    }
+    return iconMap[v];
   }
 
-  copyText(value){
+  copyText(value) {
     let selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';

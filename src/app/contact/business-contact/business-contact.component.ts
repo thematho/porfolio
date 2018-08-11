@@ -9,7 +9,6 @@ import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms'
 })
 export class BusinessContactComponent implements OnInit {
   contactForm: FormGroup;
-  cardIndex: number = 1;
   private emailService: EmailService;
   overlayService: OverlayService;
 

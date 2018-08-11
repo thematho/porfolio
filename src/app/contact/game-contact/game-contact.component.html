@@ -1,33 +1,37 @@
-<mat-card *ngIf="cardIndex === 0">
+<mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h1>Contact for personal stuff</h1>
+      <h1>Let's Game!</h1>
     </mat-card-title>
-    <mat-card-subtitle>Need mentorship? Want to chat about code or play some games?</mat-card-subtitle>
+    <mat-card-subtitle>Nothing like playing with Friends</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="/assets/contact_banner.jpg" alt="Write me!">
+  <img mat-card-image
+  src="/assets/contact_banner.jpg"
+  alt="Write me!">
   <mat-card-content>
-    <mat-list>
-      <mat-list-item>
-        <a mat-icon-button target="_blank" href="https://steamcommunity.com/id/thematho/" matTooltip="Go to my Steam Profile">
-          <mat-icon color="primary">videogame_asset</mat-icon>
-        </a>
-        <span>Steam Profile</span>
-      </mat-list-item>
-      <mat-list-item>
-        <button mat-icon-button (click)="copyText('SW-6495-8088-2501')" matTooltip="Copy Nintendo Friend code">
-          <mat-icon color="accent">gamepad</mat-icon>
-        </button>
-        <span>Nintendo Switch Friend code</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span>Add me on Hangouts!
-          <b>thematho@gmail.com</b>
-        </span>
-        <button mat-icon-button (click)="copyText('thematho@gmail.com')" matTooltip="Copy my personal gmail address">
-          <mat-icon color="primary">assignment</mat-icon>
-        </button>
-      </mat-list-item>
-    </mat-list>
+    <p>You can find me on Steam, PS4, Battle.net and Nintendo Switch, just add me! I love to play with new people!</p>
   </mat-card-content>
+  <mat-card-actions class="actions__profiles">
+    <a mat-icon-button
+      target="_blank"
+      href="https://steamcommunity.com/id/thematho/"
+      matTooltip="Go to my Steam Profile">
+      <mat-icon color="primary" svgIcon="steam"></mat-icon>
+    </a>
+    <button mat-icon-button
+      (click)="copyText('SW-6495-8088-2501')"
+      matTooltip="Copy Nintendo Friend code">
+      <mat-icon color="primary" svgIcon="nintendo-switch"></mat-icon>
+    </button>
+    <button mat-icon-button
+      (click)="copyText('fmmatho')"
+      matTooltip="Copy PS Network ID">
+      <mat-icon color="primary" svgIcon="playstation"></mat-icon>
+    </button>
+    <button mat-icon-button
+      (click)="copyText('thematho#2230')"
+      matTooltip="Copy Battle.Net ID">
+      <mat-icon color="primary">gamepad</mat-icon>
+    </button>
+  </mat-card-actions>
 </mat-card>

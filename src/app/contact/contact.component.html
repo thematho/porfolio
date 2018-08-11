@@ -1,3 +1,16 @@
-<mat-slider class="mat-slider--thumb-mat-icons" [invert]="false" [max]="1" [min]="0" [step]="1" [displayWith]="getSliderIconText"
-  [thumbLabel]="true" [(ngModel)]="cardIndex" [vertical]="true">
+<mat-slider class="mat-slider--thumb-mat-icons"
+  [invert]="false"
+  [max]="2"
+  [min]="0"
+  [step]="1"
+  [tickInterval]="1"
+  [displayWith]="getSliderIconText"
+  [thumbLabel]="true"
+  [(ngModel)]="cardIndex"
+  [vertical]="true">
 </mat-slider>
+<business-contact *ngIf="cardIndex === 2"></business-contact>
+<mentorship-contact *ngIf="cardIndex === 1"
+  (clicked)="copyText($event)"></mentorship-contact>
+<game-contact *ngIf="cardIndex === 0"
+  (clicked)="copyText($event)"></game-contact>

@@ -7,6 +7,6 @@ mat-card-content {
     flex-direction: column;
 }
 
-.actions__profiles {
-    float: right;
+.clickable{
+    cursor: pointer;
 }

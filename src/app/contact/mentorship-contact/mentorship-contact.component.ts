@@ -1,16 +1,17 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'game-contact',
-  templateUrl: './game-contact.component.html',
-  styleUrls: ['./game-contact.component.css']
+  selector: 'mentorship-contact',
+  templateUrl: './mentorship-contact.component.html',
+  styleUrls: ['./mentorship-contact.component.css']
 })
-export class GameContactComponent implements OnInit {
+export class MentorshipContactComponent implements OnInit {
   @Output() clicked = new EventEmitter();
 
   ngOnInit() { }
   copyText(text) {
     this.clicked.emit(text);
   }
+
 
 }
