@@ -6,8 +6,8 @@
   [tickInterval]="1"
   [displayWith]="getSliderIconText"
   [thumbLabel]="true"
-  [(ngModel)]="cardIndex"
-  [vertical]="true">
+  [vertical]="true"
+  [(ngModel)]="cardIndex">
 </mat-slider>
 <business-contact *ngIf="cardIndex === 2"></business-contact>
 <mentorship-contact *ngIf="cardIndex === 1"
