@@ -5,6 +5,6 @@
 }
 
 .mat-card__header-image {
-    background-image: url('/assets/photo.jpg');
+    background-image: url('/assets/photo_small.jpg');
     background-size: cover;
 }

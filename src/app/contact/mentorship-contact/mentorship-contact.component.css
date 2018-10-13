@@ -1,12 +1,16 @@
 mat-card {
-    width: 500px;
+  width: 500px;
 }
 
 mat-card-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.clickable{
-    cursor: pointer;
+.clickable {
+  cursor: pointer;
+}
+
+.actions__profiles {
+  text-align: right;
 }

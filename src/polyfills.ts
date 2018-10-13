@@ -78,3 +78,5 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+//To solve gesture dependencies https://stackoverflow.com/questions/48249484/mat-slider-not-updating-immediately-on-drag
+import 'hammerjs';
