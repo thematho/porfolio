@@ -4,7 +4,7 @@ import { OverlayService } from './overlay.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   providers: [OverlayService],
 })
 export class AppComponent {

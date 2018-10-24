@@ -4,7 +4,7 @@ import { Component, OnInit, ViewChild, ElementRef, Renderer } from '@angular/cor
 @Component({
   selector: 'cold-window',
   templateUrl: './cold-window.component.html',
-  styleUrls: ['./cold-window.component.css']
+  styleUrls: ['./cold-window.component.scss']
 })
 export class ColdWindowComponent implements OnInit {
   @ViewChild('window') canvas: ElementRef;

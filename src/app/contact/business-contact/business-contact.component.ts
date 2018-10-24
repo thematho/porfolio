@@ -5,7 +5,7 @@ import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms'
 @Component({
   selector: 'business-contact',
   templateUrl: './business-contact.component.html',
-  styleUrls: ['./business-contact.component.css']
+  styleUrls: ['./business-contact.component.scss']
 })
 export class BusinessContactComponent implements OnInit {
   contactForm: FormGroup;
