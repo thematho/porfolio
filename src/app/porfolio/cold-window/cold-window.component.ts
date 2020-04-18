@@ -7,7 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/co
   styleUrls: ['./cold-window.component.scss']
 })
 export class ColdWindowComponent implements OnInit {
-  @ViewChild('window') canvas: ElementRef;
+  @ViewChild('window', {static: true, read: ElementRef}) canvas: ElementRef;
+
   private image: HTMLImageElement;
   private renderer: Renderer2;
   private context: any;
