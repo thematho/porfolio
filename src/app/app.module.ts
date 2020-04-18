@@ -3,18 +3,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LayoutModule } from '@angular/cdk/layout';
-import {
-  MatSidenavModule,
-  MatButtonModule,
-  MatToolbarModule,
-  MatListModule,
-  MatIconModule,
-  MatFormFieldModule,
-  MatCardModule,
-  MatProgressSpinnerModule,
-  MatTooltipModule,
-  MatIconRegistry
-} from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatListModule } from '@angular/material/list'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatTooltipModule } from '@angular/material/tooltip'
 import { AppComponent } from './app.component';
 import { MathoHeaderComponent } from './matho-header/matho-header.component';
 import { ModuleRouting } from './app.routes';

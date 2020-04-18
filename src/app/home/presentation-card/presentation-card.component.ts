@@ -12,4 +12,6 @@ export class PresentationCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  onAction1() { }
+
 }

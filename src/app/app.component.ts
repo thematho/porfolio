@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatSidenav } from '../../node_modules/@angular/material';
+import { MatSidenav } from '@angular/material/sidenav';
 import { OverlayService } from './overlay.service';
 @Component({
   selector: 'app-root',
