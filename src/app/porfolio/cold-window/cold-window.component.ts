@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 
 
 @Component({
@@ -9,14 +9,14 @@ import { Component, OnInit, ViewChild, ElementRef, Renderer } from '@angular/cor
 export class ColdWindowComponent implements OnInit {
   @ViewChild('window') canvas: ElementRef;
   private image: HTMLImageElement;
-  private renderer: Renderer;
+  private renderer: Renderer2;
   private context: any;
   private lastCoord: { x: number; y: number; };
   private readonly imgUrl: string = '/assets/winter.jpg'
   private readonly lineWidth: number = 100  ;
   private readonly radius: number = 120;
 
-  constructor(renderer: Renderer) {
+  constructor(renderer: Renderer2) {
     this.image = new Image();
     this.radius = this.radius;
     this.renderer = renderer;
