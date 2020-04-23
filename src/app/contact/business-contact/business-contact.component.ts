@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OverlayService } from './../../overlay.service';
-import { EmailService } from './../email.service';
+import { EmailService } from '../services/email/email.service';
 import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'business-contact',

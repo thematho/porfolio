@@ -3,33 +3,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatListModule } from '@angular/material/list'
-import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
-import { MatTooltipModule } from '@angular/material/tooltip'
+
 import { AppComponent } from './app.component';
-import { MathoHeaderComponent } from './matho-header/matho-header.component';
+import { MathoHeaderComponent } from './shared/components/matho-header/matho-header.component';
 import { ModuleRouting } from './app.routes';
 import { AboutComponent } from './about/about.component';
-import { PorfolioComponent } from './porfolio/porfolio.component';
 import { ColdWindowComponent } from './porfolio/cold-window/cold-window.component';
-import { LoadingOverlayComponent } from './loading-overlay/loading-overlay.component';
 import { HomeModule } from './home/home.module';
 import { ContactModule } from './contact/contact.module';
+import { VendorsModule } from './vendors/vendors.module';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     MathoHeaderComponent,
     AboutComponent,
-    PorfolioComponent,
     ColdWindowComponent,
-    LoadingOverlayComponent,
   ],
   imports: [
     HomeModule,
@@ -37,17 +27,8 @@ import { ContactModule } from './contact/contact.module';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatIconModule,
     LayoutModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
-    MatTooltipModule,
+    VendorsModule,
     ModuleRouting,
   ],
   providers: [],
