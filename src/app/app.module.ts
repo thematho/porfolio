@@ -1,35 +1,29 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatIconRegistry } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
-import { MathoHeaderComponent } from './shared/components/matho-header/matho-header.component';
-import { ModuleRouting } from './app.routes';
-import { AboutComponent } from './about/about.component';
-import { ColdWindowComponent } from './porfolio/cold-window/cold-window.component';
 import { HomeModule } from './home/home.module';
-import { ContactModule } from './contact/contact.module';
+import { AppRoutingModule } from './routing/app-routing.module';
+import { SharedModule } from './shared/shared.module';
 import { VendorsModule } from './vendors/vendors.module';
-import { MatIconRegistry } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MathoHeaderComponent,
-    AboutComponent,
-    ColdWindowComponent,
   ],
   imports: [
-    HomeModule,
-    ContactModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     LayoutModule,
+    HomeModule,
+    AppRoutingModule,
+    SharedModule,
     VendorsModule,
-    ModuleRouting,
   ],
   providers: [],
   bootstrap: [AppComponent]

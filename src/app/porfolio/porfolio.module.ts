@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { PorfolioComponent } from './porfolio.component';
 import { ColdWindowComponent } from './cold-window/cold-window.component';
+import { RoutingModule } from './routing/routing.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ColdWindowComponent } from './cold-window/cold-window.component';
     CommonModule,
     MatCardModule,
     MatIconModule,
+    RoutingModule
   ],
   exports: [
     PorfolioComponent,
