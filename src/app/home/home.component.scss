@@ -1,0 +1,15 @@
+@import "../shared/styles/animations/_grid_animations.scss";
+
+:host {
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+  // animation: gap-animation-grid 3s 1s;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  animation: resize 3s;
+  mat-card {
+    // min-width: 500px;
+    // min-height: 500px;
+  }
+}

@@ -1,0 +1,46 @@
+// Original codePen of Michelle Barker https://codepen.io/michellebarker/pen/oJmZKK
+
+@keyframes resize {
+  0% {
+    grid-template-columns: 5fr 1fr 1fr;
+    grid-template-rows: 5fr 1fr 1fr;
+  }
+
+  25% {
+    grid-template-columns: 5fr 1fr 3fr;
+    grid-template-rows: 5fr 1fr 3fr;
+  }
+
+  50% {
+    grid-template-columns: 5fr fr 1fr;
+    grid-template-rows: 5fr 5fr 1fr;
+  }
+
+  75% {
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-rows: 3fr 2fr 1fr;
+  }
+
+  100% {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@keyframes gap-animation-grid {
+  from {
+    gap: 100vw;
+  }
+  to {
+    gap: 1rem;
+  }
+}
+
+@keyframes gap-animation-first-child {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
