@@ -108,7 +108,6 @@
       }
     }
   },
-  "defaultProject": "porfolio",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"
